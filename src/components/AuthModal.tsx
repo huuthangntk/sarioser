@@ -28,7 +28,7 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
               }
             }
           }}
-          providers={["google", "github"]}
+          providers={["google"]}
           redirectTo={window.location.origin}
           theme="dark"
           localization={{
