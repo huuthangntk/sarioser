@@ -11,18 +11,32 @@ interface AuthModalProps {
 export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] bg-[#1A1F2C] border-purple-500/20">
         <Auth
           supabaseClient={supabase}
-          appearance={{ theme: ThemeSupa }}
-          providers={["google"]}
+          appearance={{ 
+            theme: ThemeSupa,
+            variables: {
+              default: {
+                colors: {
+                  brand: '#8B5CF6',
+                  brandAccent: '#7C3AED',
+                  inputBackground: '#2D3748',
+                  inputText: '#FFFFFF',
+                  inputPlaceholder: '#A0AEC0',
+                }
+              }
+            }
+          }}
+          providers={["google", "github"]}
           redirectTo={window.location.origin}
-          theme="light"
+          theme="dark"
           localization={{
             variables: {
               sign_in: {
                 email_label: "ایمیل",
                 password_label: "رمز عبور",
+                phone_label: "شماره موبایل",
                 button_label: "ورود",
                 loading_button_label: "در حال ورود...",
                 social_provider_text: "ورود با {{provider}}",
@@ -31,6 +45,7 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
               sign_up: {
                 email_label: "ایمیل",
                 password_label: "رمز عبور",
+                phone_label: "شماره موبایل",
                 button_label: "ثبت نام",
                 loading_button_label: "در حال ثبت نام...",
                 social_provider_text: "ثبت نام با {{provider}}",
