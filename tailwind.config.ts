@@ -25,11 +25,11 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#1E40AF',
+          DEFAULT: '#8B5CF6',
           foreground: '#ffffff'
         },
         secondary: {
-          DEFAULT: '#0D9488',
+          DEFAULT: '#7C3AED',
           foreground: '#ffffff'
         },
         destructive: {
@@ -55,6 +55,7 @@ export default {
       },
       fontFamily: {
         vazir: ['Vazirmatn', 'sans-serif'],
+        lalezar: ['Lalezar', 'cursive'],
       },
       borderRadius: {
         lg: 'var(--radius)',
