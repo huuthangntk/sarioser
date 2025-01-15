@@ -36,7 +36,6 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
               sign_in: {
                 email_label: "ایمیل",
                 password_label: "رمز عبور",
-                phone_label: "شماره موبایل",
                 button_label: "ورود",
                 loading_button_label: "در حال ورود...",
                 social_provider_text: "ورود با {{provider}}",
@@ -45,7 +44,6 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
               sign_up: {
                 email_label: "ایمیل",
                 password_label: "رمز عبور",
-                phone_label: "شماره موبایل",
                 button_label: "ثبت نام",
                 loading_button_label: "در حال ثبت نام...",
                 social_provider_text: "ثبت نام با {{provider}}",
