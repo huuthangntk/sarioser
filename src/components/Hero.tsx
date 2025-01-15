@@ -1,19 +1,23 @@
 import { Button } from "./ui/button";
 
-export const Hero = () => {
+interface HeroProps {
+  onGetStarted: () => void;
+}
+
+export const Hero = ({ onGetStarted }: HeroProps) => {
   return (
-    <section className="py-12 md:py-24 bg-gradient-to-l from-blue-300/10 to-teal-300/10">
+    <section className="py-20 md:py-32">
       <div className="container">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             خرید و فروش امن
-            <span className="text-primary block">ارزهای دیجیتال</span>
+            <span className="block">ارزهای دیجیتال</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             با مرسی مانی، امن‌ترین صرافی ارز دیجیتال ایران، به دنیای رمزارزها وارد شوید
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="text-lg">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button size="lg" className="text-lg" onClick={onGetStarted}>
               شروع معامله
             </Button>
             <Button size="lg" variant="outline" className="text-lg">
