@@ -27,7 +27,6 @@ export const Header = ({ onAuthClick }: HeaderProps) => {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8 space-x-reverse">
-            <Link to="/prices" className={`text-gray-400 hover:text-purple-400 transition-colors ${isActive('/prices') ? 'text-purple-400' : ''}`}>قیمت‌ها</Link>
             <Link to="/guide" className={`text-gray-400 hover:text-purple-400 transition-colors ${isActive('/guide') ? 'text-purple-400' : ''}`}>راهنما</Link>
             <Link to="/contact" className={`text-gray-400 hover:text-purple-400 transition-colors ${isActive('/contact') ? 'text-purple-400' : ''}`}>تماس با ما</Link>
           </nav>
@@ -49,20 +48,11 @@ export const Header = ({ onAuthClick }: HeaderProps) => {
         {isOpen && (
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
-              <Link to="/prices" className="text-gray-400 hover:text-purple-400 transition-colors">قیمت‌ها</Link>
               <Link to="/guide" className="text-gray-400 hover:text-purple-400 transition-colors">راهنما</Link>
               <Link to="/contact" className="text-gray-400 hover:text-purple-400 transition-colors">تماس با ما</Link>
             </div>
           </div>
         )}
-      </div>
-
-      <div className="bg-purple-900/20 overflow-hidden py-2">
-        <div className="animate-ticker whitespace-nowrap">
-          <span className="inline-block px-4">🔥 عرضه اولیه توکن مرسی مانی - فرصت محدود</span>
-          <span className="inline-block px-4">📈 بیت‌کوین به بالاترین قیمت ۶ ماه اخیر رسید</span>
-          <span className="inline-block px-4">🎉 کارمزد صفر در معاملات تا پایان ماه</span>
-        </div>
       </div>
     </header>
   );

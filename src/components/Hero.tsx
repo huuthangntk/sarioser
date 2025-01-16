@@ -26,18 +26,11 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               >
                 شروع کنید
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg font-lalezar border-purple-500 text-purple-500 hover:bg-purple-500/10"
-              >
-                مشاهده قیمت‌ها
-              </Button>
             </div>
           </div>
           <div className="hidden md:block">
             <img 
-              src="/lovable-uploads/5c756161-9d5f-456f-9f79-7b35a6411b8e.png" 
+              src="/lovable-uploads/b6748dfa-acdb-4e1e-b9ce-dfcb793e3540.png" 
               alt="Crypto Astronaut" 
               className="w-full h-auto max-w-md mx-auto"
             />
