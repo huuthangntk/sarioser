@@ -7,7 +7,7 @@ interface HeroProps {
 
 export const Hero = ({ onGetStarted }: HeroProps) => {
   return (
-    <section className="py-20 md:py-32 relative overflow-hidden">
+    <section className="py-20 md:py-32 relative overflow-hidden bg-[#1A1F2C]">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="text-right">
@@ -30,8 +30,8 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           </div>
           <div className="hidden md:block">
             <img 
-              src="/lovable-uploads/b6748dfa-acdb-4e1e-b9ce-dfcb793e3540.png" 
-              alt="Crypto Astronaut" 
+              src="/lovable-uploads/71ba8f62-34e8-4f1d-aaf1-b3a58b4a080c.png" 
+              alt="Calculator Illustration" 
               className="w-full h-auto max-w-md mx-auto"
             />
           </div>

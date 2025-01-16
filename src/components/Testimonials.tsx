@@ -12,7 +12,7 @@ const testimonials = [
     id: 2,
     name: "سارا احمدی",
     role: "سرمایه‌گذار",
-    content: "پشتیبانی ۲۴ ساعته و راهنمایی‌های مفید برای تازه‌واردها عالی است.",
+    content: "پشتیبانی و راهنمایی‌های مفید برای تازه‌واردها عالی است.",
     rating: 5,
   },
   {
@@ -26,7 +26,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-purple-900/20 to-transparent">
+    <section className="py-16 bg-[#1A1F2C]">
       <div className="container mx-auto">
         <h2 className="text-3xl font-lalezar text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
           نظرات کاربران ما
@@ -35,7 +35,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="glass-card p-6 rounded-lg space-y-4"
+              className="glass-card p-6 rounded-lg space-y-4 hover:scale-105 transition-transform duration-300"
             >
               <div className="flex items-center space-x-2 space-x-reverse">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -45,10 +45,10 @@ export const Testimonials = () => {
                   />
                 ))}
               </div>
-              <p className="text-gray-300">{testimonial.content}</p>
+              <p className="text-gray-300 font-lalezar">{testimonial.content}</p>
               <div>
-                <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                <p className="text-sm text-gray-400">{testimonial.role}</p>
+                <h4 className="font-lalezar text-white">{testimonial.name}</h4>
+                <p className="text-sm text-gray-400 font-lalezar">{testimonial.role}</p>
               </div>
             </div>
           ))}

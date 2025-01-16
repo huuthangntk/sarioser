@@ -18,17 +18,14 @@ export const Header = ({ onAuthClick }: HeaderProps) => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Button variant="outline" onClick={onAuthClick} className="bg-transparent border-purple-500 text-purple-500 hover:bg-purple-500/10">
+            <Button variant="outline" onClick={onAuthClick} className="bg-transparent border-purple-500 text-purple-500 hover:bg-purple-500/10 font-lalezar">
               ورود / ثبت نام
             </Button>
-            <a href="tel:+982112345678" className="mr-4 hidden md:block text-sm text-gray-400 hover:text-purple-400 transition-colors">
-              ۰۲۱-۱۲۳۴۵۶۷۸
-            </a>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8 space-x-reverse">
-            <Link to="/guide" className={`text-gray-400 hover:text-purple-400 transition-colors ${isActive('/guide') ? 'text-purple-400' : ''}`}>راهنما</Link>
-            <Link to="/contact" className={`text-gray-400 hover:text-purple-400 transition-colors ${isActive('/contact') ? 'text-purple-400' : ''}`}>تماس با ما</Link>
+            <Link to="/guide" className={`text-gray-400 hover:text-purple-400 transition-colors font-lalezar ${isActive('/guide') ? 'text-purple-400' : ''}`}>راهنما</Link>
+            <Link to="/contact" className={`text-gray-400 hover:text-purple-400 transition-colors font-lalezar ${isActive('/contact') ? 'text-purple-400' : ''}`}>تماس با ما</Link>
           </nav>
 
           <Link to="/" className="flex items-center">
@@ -48,8 +45,8 @@ export const Header = ({ onAuthClick }: HeaderProps) => {
         {isOpen && (
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
-              <Link to="/guide" className="text-gray-400 hover:text-purple-400 transition-colors">راهنما</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-purple-400 transition-colors">تماس با ما</Link>
+              <Link to="/guide" className="text-gray-400 hover:text-purple-400 transition-colors font-lalezar">راهنما</Link>
+              <Link to="/contact" className="text-gray-400 hover:text-purple-400 transition-colors font-lalezar">تماس با ما</Link>
             </div>
           </div>
         )}
