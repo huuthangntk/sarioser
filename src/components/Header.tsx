@@ -29,9 +29,7 @@ export const Header = ({ onAuthClick }: HeaderProps) => {
           </nav>
 
           <Link to="/" className="flex items-center">
-            <span className="text-xl font-lalezar bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-              مرسی مانی
-            </span>
+            <img src="/lovable-uploads/bb4ab312-72df-407f-b905-0a7cf6e8b718.png" alt="Sarioser Logo" className="h-8" />
           </Link>
 
           <button

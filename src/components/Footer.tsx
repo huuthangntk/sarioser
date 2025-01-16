@@ -11,7 +11,7 @@ export const Footer = () => {
             <h3 className="text-lg font-lalezar mb-4">پشتیبانی</h3>
             <div className="flex items-center gap-2">
               <Mail className="size-4" />
-              <span className="font-lalezar">support@exchange.com</span>
+              <span className="font-lalezar">support@sarioser.xyz</span>
             </div>
             <p className="text-gray-400 font-lalezar">
               پشتیبانی در خدمت شماست
