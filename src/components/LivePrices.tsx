@@ -30,16 +30,16 @@ export const LivePrices = () => {
   }, []);
 
   return (
-    <section className="py-8 bg-black/20">
+    <section className="py-8 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {prices.map((price) => (
-            <div key={price.symbol} className="glass-card p-4 rounded-lg">
+            <div key={price.symbol} className="glass-card p-4 rounded-lg hover:bg-white/15 transition-colors">
               <div className="text-center">
-                <h3 className="font-lalezar text-lg mb-2">{price.name}</h3>
-                <p className="font-lalezar text-sm text-gray-400">{price.symbol}</p>
-                <p className="font-lalezar text-lg mt-2">{price.price.toLocaleString()} تومان</p>
-                <p className={`text-sm flex items-center justify-center mt-1 font-lalezar ${price.change >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                <h3 className="font-lalezar text-lg mb-2 text-white">{price.name}</h3>
+                <p className="font-lalezar text-sm text-purple-300">{price.symbol}</p>
+                <p className="font-lalezar text-lg mt-2 text-white/90">{price.price.toLocaleString()} تومان</p>
+                <p className={`text-sm flex items-center justify-center mt-1 font-lalezar ${price.change >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
                   {price.change >= 0 ? <ArrowUpIcon className="w-4 h-4 ml-1" /> : <ArrowDownIcon className="w-4 h-4 ml-1" />}
                   {Math.abs(price.change).toFixed(2)}%
                 </p>

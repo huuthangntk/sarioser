@@ -4,33 +4,33 @@
  
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 0 0% 98%;
+    --background: 240 24% 12%;
+    --foreground: 210 40% 98%;
  
-    --card: 222 47% 11%;
-    --card-foreground: 0 0% 98%;
+    --card: 240 24% 12%;
+    --card-foreground: 210 40% 98%;
  
-    --popover: 222 47% 11%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 240 24% 12%;
+    --popover-foreground: 210 40% 98%;
  
-    --primary: 221 83% 53%;
+    --primary: 262 83% 66%;
     --primary-foreground: 210 40% 98%;
  
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 262 83% 58%;
     --secondary-foreground: 210 40% 98%;
  
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 24% 20%;
+    --muted-foreground: 215 20.2% 75.1%;
  
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 262 83% 66%;
     --accent-foreground: 210 40% 98%;
  
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
  
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 240 24% 20%;
+    --input: 240 24% 20%;
+    --ring: 262 83% 66%;
  
     --radius: 0.5rem;
   }
@@ -47,11 +47,11 @@
 }
 
 .glass-card {
-  @apply backdrop-blur-lg bg-white/5 border border-white/10;
+  @apply backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-blue-400;
 }
 
 .floating-animation {
