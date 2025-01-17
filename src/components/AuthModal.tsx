@@ -51,7 +51,6 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
                 sign_up: {
                   email_label: 'ایمیل',
                   password_label: 'رمز عبور',
-                  confirm_password_label: 'تکرار رمز عبور',
                   button_label: 'ثبت نام',
                   loading_button_label: 'در حال ثبت نام...',
                   social_provider_text: 'ثبت نام با {{provider}}',
