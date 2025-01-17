@@ -2,16 +2,21 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
 interface HeaderProps {
-  onAuthClick: () => void;
+  onSignInClick: () => void;
+  onSignUpClick: () => void;
 }
 
-export const Header = ({ onAuthClick }: HeaderProps) => {
+export const Header = ({ onSignInClick, onSignUpClick }: HeaderProps) => {
   return (
     <header className="py-4 bg-[#1A1F2C] border-b border-purple-500/20">
       <div className="container">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-lalezar text-white">
-            ساریوسر
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/870b3a33-7b21-4aaa-aa6d-8d52d43740fb.png" 
+              alt="Sarioser Logo" 
+              className="h-8 w-auto"
+            />
           </Link>
           <nav className="flex items-center gap-4">
             <Link to="/guide" className="text-gray-300 hover:text-white transition-colors">
@@ -24,13 +29,13 @@ export const Header = ({ onAuthClick }: HeaderProps) => {
               <Button
                 variant="outline"
                 className="text-white border-purple-500/20 hover:bg-purple-500/10"
-                onClick={() => onAuthClick()}
+                onClick={onSignInClick}
               >
                 ورود
               </Button>
               <Button
                 className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
-                onClick={() => onAuthClick()}
+                onClick={onSignUpClick}
               >
                 ثبت نام
               </Button>

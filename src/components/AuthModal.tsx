@@ -2,19 +2,45 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { supabase } from "@/integrations/supabase/client";
+import { useState, useEffect } from "react";
+import { Progress } from "./ui/progress";
 
 interface AuthModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  initialView?: 'sign_in' | 'sign_up';
 }
 
-export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
+const calculatePasswordStrength = (password: string): number => {
+  let strength = 0;
+  if (password.length >= 8) strength += 25;
+  if (password.match(/[a-z]/)) strength += 25;
+  if (password.match(/[A-Z]/)) strength += 25;
+  if (password.match(/[0-9]/)) strength += 25;
+  return strength;
+};
+
+export const AuthModal = ({ open, onOpenChange, initialView = 'sign_in' }: AuthModalProps) => {
+  const [view, setView] = useState(initialView);
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordStrength, setPasswordStrength] = useState(0);
+
+  useEffect(() => {
+    setView(initialView);
+  }, [initialView]);
+
+  useEffect(() => {
+    setPasswordStrength(calculatePasswordStrength(password));
+  }, [password]);
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[425px] bg-[#1A1F2C] border-purple-500/20">
         <div className="py-6">
           <Auth
             supabaseClient={supabase}
+            view={view}
             appearance={{
               theme: ThemeSupa,
               variables: {
@@ -65,6 +91,17 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
               },
             }}
           />
+          {view === 'sign_up' && (
+            <div className="mt-4 space-y-4">
+              <div>
+                <label className="text-sm text-white">قدرت رمز عبور</label>
+                <Progress value={passwordStrength} className="h-2 mt-1" />
+                <p className="text-xs text-gray-400 mt-1">
+                  رمز عبور باید حداقل ۸ کاراکتر و شامل حروف و اعداد باشد
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
