@@ -7,9 +7,9 @@ interface HeroProps {
 
 export const Hero = ({ onGetStarted }: HeroProps) => {
   return (
-    <section className="py-8 md:py-12 relative overflow-hidden bg-[#1A1F2C]">
+    <section className="py-4 md:py-6 relative overflow-hidden bg-[#1A1F2C]">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

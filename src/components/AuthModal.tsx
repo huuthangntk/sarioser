@@ -22,8 +22,18 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
                   colors: {
                     brand: '#8B5CF6',
                     brandAccent: '#7C3AED',
+                    inputText: 'white',
+                    inputBackground: 'transparent',
+                    inputBorder: '#4B5563',
+                    inputLabelText: 'white',
+                    inputPlaceholder: '#9CA3AF',
                   },
                 },
+              },
+              className: {
+                input: 'text-white placeholder:text-gray-400',
+                label: 'text-white',
+                message: 'text-white',
               },
             }}
             providers={[]}
@@ -41,6 +51,7 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
                 sign_up: {
                   email_label: 'ایمیل',
                   password_label: 'رمز عبور',
+                  confirm_password_label: 'تکرار رمز عبور',
                   button_label: 'ثبت نام',
                   loading_button_label: 'در حال ثبت نام...',
                   social_provider_text: 'ثبت نام با {{provider}}',
