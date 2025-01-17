@@ -31,100 +31,6 @@
   - FAQ: Animated accordion with purple accents
   - Footer: Dark gradient with contact info
 
-### 2. Neo Exchange
-- **Color Scheme**: 
-  - Light: White/Gray (#FFFFFF, #F3F4F6)
-  - Dark: Black/Gray (#000000, #1F2937)
-- **Design Elements**:
-  - Minimal UI components
-  - Sharp corners
-  - Abundant white space
-- **Typography**:
-  - Clean, sans-serif fonts
-- **Special Features**:
-  - Dark/Light theme toggle
-  - Smooth transitions between themes
-  - Hover reveal effects
-- **Page Elements**:
-  - Hero: Minimalist split layout with large typography
-  - Navigation: Floating header with theme toggle
-  - Price Ticker: Clean, borderless price cards
-  - Features: Simple icon-based grid layout
-  - Testimonials: Minimal quote cards
-  - FAQ: Clean, bordered accordions
-  - Footer: Simple two-column layout
-
-### 3. Cyber Exchange
-- **Color Scheme**:
-  - Primary: Black (#000000)
-  - Accents: Neon Pink (#FF00FF), Cyan (#00FFFF)
-- **Design Elements**:
-  - Terminal-style interfaces
-  - Glitch effects
-  - Digital noise textures
-- **Typography**:
-  - Monospace fonts for numbers
-  - Glitch text effects
-- **Animations**:
-  - Text scramble effects
-  - Glitch animations
-  - Data stream particles
-- **Page Elements**:
-  - Hero: Terminal-style interface with typing animation
-  - Navigation: Neon-bordered header with glitch effects
-  - Price Ticker: Matrix-style price display
-  - Features: Neon-outlined cards with hover glitch
-  - Testimonials: Terminal-style quote display
-  - FAQ: Cyber-themed expandable sections
-  - Footer: Retro terminal footer with neon accents
-
-### 4. Eco Exchange
-- **Color Scheme**:
-  - Primary: Green (#4ADE80)
-  - Secondary: Earth tones (#F9FAFB, #D1FAE5)
-- **Design Elements**:
-  - Organic shapes
-  - Natural patterns
-  - Rounded corners
-- **Typography**:
-  - Soft, rounded fonts
-- **Animations**:
-  - Floating leaves
-  - Growing/organic movements
-  - Smooth transitions
-- **Page Elements**:
-  - Hero: Nature-inspired background with organic shapes
-  - Navigation: Leaf-patterned header
-  - Price Ticker: Cards with plant-like growth animations
-  - Features: Organic shape cards with natural transitions
-  - Testimonials: Leaf-shaped quote cards
-  - FAQ: Nature-themed expandable sections
-  - Footer: Forest-themed footer with organic patterns
-
-### 5. Future Exchange
-- **Color Scheme**:
-  - Primary: Deep Space (#1E1B4B)
-  - Accents: Holographic (#7DD3FC, #C084FC)
-- **Design Elements**:
-  - 3D geometric shapes
-  - Holographic cards
-  - Starfield backgrounds
-- **Typography**:
-  - Futuristic sans-serif
-  - Dynamic number displays
-- **Animations**:
-  - Parallax effects
-  - 3D rotations
-  - Particle systems
-- **Page Elements**:
-  - Hero: 3D geometric hero with floating elements
-  - Navigation: Holographic header with 3D effects
-  - Price Ticker: Holographic price cards with 3D rotation
-  - Features: Floating 3D feature cards
-  - Testimonials: Space-themed testimonial display
-  - FAQ: Holographic expandable panels
-  - Footer: Deep space footer with particle effects
-
 ## Implementation Guidelines
 
 ### Shared Components
@@ -181,5 +87,98 @@ All exchanges should maintain these core components:
 - XSS protection
 - CSRF tokens
 - Secure authentication flows
+
+## Dashboard Specifications
+
+### Core Dashboard Features (All Exchanges)
+1. **Identity Verification**
+   - National ID card upload with handwritten note
+   - Verification status indicator
+   - Step-by-step verification guide
+   - Document review status tracking
+
+2. **Trading Sections**
+   - Separate Mercy Money trading interface
+   - Top 20 cryptocurrencies trading platform
+   - Real-time price charts
+   - Order history
+   - Transaction logs
+
+3. **Support System**
+   - Ticketing system with priority levels
+   - Live chat support
+   - FAQ knowledge base
+   - Support ticket tracking
+   - Chat history
+
+4. **User Settings**
+   - Profile management
+   - Security settings
+   - Notification preferences
+   - API key management
+   - Language preferences
+
+### Dashboard Themes
+
+#### 1. Sarioser Dashboard (sarioser.xyz)
+- **Layout**: 
+  - Collapsible sidebar with glass effect
+  - Top navbar with user info and notifications
+  - Main content area with card-based widgets
+- **Components**:
+  - Verification Status Card (Purple gradient)
+  - Trading Widgets (Glass effect cards)
+  - Support Chat (Floating window)
+  - Settings Panels (Nested tabs with animations)
+- **Colors**:
+  - Primary: #8B5CF6 (Purple)
+  - Secondary: #3B82F6 (Blue)
+  - Background: #1A1F2C (Dark)
+  - Accent: #D8B4FE (Light Purple)
+- **Animations**:
+  - Smooth transitions between pages
+  - Loading skeletons
+  - Hover effects on cards
+  - Progress indicators
+
+#### 2. Neo Dashboard (yeruz.com)
+- **Layout**: 
+  - Minimalist design with sharp corners
+  - Floating header with theme toggle
+  - Clean, borderless price cards
+- **Colors**:
+  - Light: White/Gray (#FFFFFF, #F3F4F6)
+  - Dark: Black/Gray (#000000, #1F2937)
+- **Typography**: Clean, sans-serif fonts
+
+#### 3. Cyber Dashboard (darkhedmat.com)
+- **Layout**: 
+  - Terminal-style interface with glitch effects
+  - Neon-bordered header
+  - Matrix-style price display
+- **Colors**:
+  - Primary: Black (#000000)
+  - Accents: Neon Pink (#FF00FF), Cyan (#00FFFF)
+- **Typography**: Monospace fonts for numbers
+
+#### 4. Eco Dashboard (etebar.pro)
+- **Layout**: 
+  - Organic shapes and natural patterns
+  - Leaf-patterned header
+  - Nature-themed expandable sections
+- **Colors**:
+  - Primary: Green (#4ADE80)
+  - Secondary: Earth tones (#F9FAFB, #D1FAE5)
+- **Typography**: Soft, rounded fonts
+
+#### 5. Future Dashboard (bish.one)
+- **Layout**: 
+  - 3D geometric shapes and holographic cards
+  - Holographic header with 3D effects
+  - Floating 3D feature cards
+- **Colors**:
+  - Primary: Deep Space (#1E1B4B)
+  - Accents: Holographic (#7DD3FC, #C084FC)
+- **Typography**: Futuristic sans-serif
 
 This knowledge base serves as a foundation for creating visually distinct yet functionally consistent exchange platforms. Each implementation should maintain core functionality while expressing its unique visual identity through colors, animations, and interactive elements.
