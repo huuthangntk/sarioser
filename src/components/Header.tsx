@@ -15,7 +15,7 @@ export const Header = ({ onSignInClick, onSignUpClick }: HeaderProps) => {
             <img 
               src="/lovable-uploads/61c3053a-7f68-4c3f-acfd-1e7c06133c7e.png" 
               alt="Sarioser Logo" 
-              className="h-8 w-auto"
+              className="h-12 w-auto" // Increased from h-8 to h-12
             />
           </Link>
           <nav className="flex items-center gap-4">
