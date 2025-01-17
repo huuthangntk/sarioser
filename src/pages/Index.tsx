@@ -6,7 +6,6 @@ import { AuthModal } from "@/components/AuthModal";
 import { FAQ } from "@/components/FAQ";
 import { Testimonials } from "@/components/Testimonials";
 import { WhyUs } from "@/components/WhyUs";
-import { PriceTicker } from "@/components/PriceTicker";
 import { Features } from "@/components/Features";
 
 const Index = () => {
@@ -19,12 +18,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen font-vazir bg-[#0F172A] text-gray-100">
+    <div className="min-h-screen font-vazir bg-gradient-to-b from-[#F1F0FB] to-[#E5DEFF] text-gray-800">
       <Header onSignInClick={() => handleAuthClick('signin')} onSignUpClick={() => handleAuthClick('signup')} />
       <main className="relative overflow-hidden">
         <div className="relative">
           <Hero onGetStarted={() => handleAuthClick('signup')} />
-          <PriceTicker />
           <Features />
           <WhyUs />
           <Testimonials />

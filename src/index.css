@@ -4,32 +4,32 @@
  
 @layer base {
   :root {
-    --background: 240 24% 12%;
-    --foreground: 210 40% 98%;
+    --background: 252 98% 98%;
+    --foreground: 225 25% 20%;
  
-    --card: 240 24% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 252 98% 98%;
+    --card-foreground: 225 25% 20%;
  
-    --popover: 240 24% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 252 98% 98%;
+    --popover-foreground: 225 25% 20%;
  
-    --primary: 262 83% 66%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 252 98% 98%;
  
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 262 83% 66%;
+    --secondary-foreground: 252 98% 98%;
  
-    --muted: 240 24% 20%;
-    --muted-foreground: 215 20.2% 75.1%;
+    --muted: 240 24% 92%;
+    --muted-foreground: 225 25% 40%;
  
     --accent: 262 83% 66%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 252 98% 98%;
  
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 252 98% 98%;
  
-    --border: 240 24% 20%;
-    --input: 240 24% 20%;
+    --border: 240 24% 92%;
+    --input: 240 24% 92%;
     --ring: 262 83% 66%;
  
     --radius: 0.5rem;
@@ -47,11 +47,11 @@
 }
 
 .glass-card {
-  @apply backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg;
+  @apply backdrop-blur-lg bg-white/90 border border-purple-100 shadow-lg hover:shadow-xl transition-all duration-300;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-blue-400;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-blue-500;
 }
 
 .floating-animation {
@@ -67,18 +67,5 @@
   }
   100% {
     transform: translateY(0px);
-  }
-}
-
-.ticker-animation {
-  animation: ticker 20s linear infinite;
-}
-
-@keyframes ticker {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
