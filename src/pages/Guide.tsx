@@ -5,15 +5,15 @@ import { AuthModal } from "@/components/AuthModal";
 
 const Guide = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
+  const [authMode, setAuthMode] = useState<'sign_in' | 'sign_up'>('sign_in');
 
   const handleSignIn = () => {
-    setAuthMode('signin');
+    setAuthMode('sign_in');
     setIsAuthModalOpen(true);
   };
 
   const handleSignUp = () => {
-    setAuthMode('signup');
+    setAuthMode('sign_up');
     setIsAuthModalOpen(true);
   };
 
