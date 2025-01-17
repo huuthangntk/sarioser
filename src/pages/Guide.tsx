@@ -1,10 +1,25 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { useState } from "react";
+import { AuthModal } from "@/components/AuthModal";
 
 const Guide = () => {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
+
+  const handleSignIn = () => {
+    setAuthMode('signin');
+    setIsAuthModalOpen(true);
+  };
+
+  const handleSignUp = () => {
+    setAuthMode('signup');
+    setIsAuthModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen font-lalezar bg-[#0F172A] text-gray-100">
-      <Header onAuthClick={() => {}} />
+      <Header onSignInClick={handleSignIn} onSignUpClick={handleSignUp} />
       <main className="container py-20">
         <h1 className="text-4xl font-lalezar mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">راهنمای استفاده</h1>
         
@@ -26,6 +41,11 @@ const Guide = () => {
         </div>
       </main>
       <Footer />
+      <AuthModal 
+        open={isAuthModalOpen} 
+        onOpenChange={setIsAuthModalOpen}
+        initialView={authMode}
+      />
     </div>
   );
 };

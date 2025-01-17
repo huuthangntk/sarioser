@@ -1,4 +1,4 @@
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { supabase } from "@/integrations/supabase/client";
@@ -28,15 +28,25 @@ export const AuthModal = ({ open, onOpenChange, initialView = 'sign_in' }: AuthM
 
   useEffect(() => {
     setView(initialView);
+    // Reset password states when view changes
+    setPassword("");
+    setConfirmPassword("");
+    setPasswordStrength(0);
   }, [initialView]);
 
-  useEffect(() => {
-    setPasswordStrength(calculatePasswordStrength(password));
-  }, [password]);
+  // Monitor password input
+  const handlePasswordInput = (e: any) => {
+    const newPassword = e.target.value;
+    setPassword(newPassword);
+    setPasswordStrength(calculatePasswordStrength(newPassword));
+  };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[425px] bg-[#1A1F2C] border-purple-500/20">
+        <DialogTitle className="text-xl font-bold text-white">
+          {view === 'sign_in' ? 'ورود به حساب کاربری' : 'ایجاد حساب کاربری'}
+        </DialogTitle>
         <div className="py-6">
           <Auth
             supabaseClient={supabase}

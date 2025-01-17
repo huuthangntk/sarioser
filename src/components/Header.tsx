@@ -13,7 +13,7 @@ export const Header = ({ onSignInClick, onSignUpClick }: HeaderProps) => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/870b3a33-7b21-4aaa-aa6d-8d52d43740fb.png" 
+              src="/lovable-uploads/61c3053a-7f68-4c3f-acfd-1e7c06133c7e.png" 
               alt="Sarioser Logo" 
               className="h-8 w-auto"
             />
@@ -21,9 +21,6 @@ export const Header = ({ onSignInClick, onSignUpClick }: HeaderProps) => {
           <nav className="flex items-center gap-4">
             <Link to="/guide" className="text-gray-300 hover:text-white transition-colors">
               راهنما
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              تماس با ما
             </Link>
             <div className="flex gap-2">
               <Button
