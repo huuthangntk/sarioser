@@ -34,11 +34,23 @@ export const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
                   email_label: 'ایمیل',
                   password_label: 'رمز عبور',
                   button_label: 'ورود',
+                  loading_button_label: 'در حال ورود...',
+                  social_provider_text: 'ورود با {{provider}}',
+                  link_text: 'حساب کاربری دارید؟ وارد شوید',
                 },
                 sign_up: {
                   email_label: 'ایمیل',
                   password_label: 'رمز عبور',
                   button_label: 'ثبت نام',
+                  loading_button_label: 'در حال ثبت نام...',
+                  social_provider_text: 'ثبت نام با {{provider}}',
+                  link_text: 'حساب کاربری ندارید؟ ثبت نام کنید',
+                },
+                forgotten_password: {
+                  link_text: 'رمز عبور خود را فراموش کرده‌اید؟',
+                  button_label: 'بازیابی رمز عبور',
+                  loading_button_label: 'در حال ارسال ایمیل بازیابی...',
+                  confirmation_text: 'ایمیل بازیابی رمز عبور ارسال شد',
                 },
               },
             }}
